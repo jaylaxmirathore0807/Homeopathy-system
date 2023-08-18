@@ -1,0 +1,16 @@
+SMAP
+symptoms_jsp.java
+JSP
+*S JSP
+*F
++ 0 symptoms.jsp
+symptoms.jsp
+*L
+5,20:48
+25,9:69
+33:78
+34:79,3
+35:82
+36,6:84
+41,18:90
+*E

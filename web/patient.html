@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Patient Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="new_div"></div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="main.html">Medicine</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="patient.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                  <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1>CASE TAKING FORM:</h1><br>
+                <label for="name">Name :</label><input type="text" id="name" class="form-control">
+                <label for="age">Age :</label><input type="number" id="age" min="0" class="form-control">
+                <label for="dat">Date :</label><input type="date" id="dat" class="form-control">
+                <label for="parents">Parents :</label><select id="parents" class="form-control">
+                                <option class="form-control">Both Alive</option>
+                                <option class="form-control">Both Died</option>
+                                <option class="form-control">Father Only</option>
+                                <option class="form-control">Mother Only</option>
+                            </select>
+                <label for="siblings">Siblings :</label><input type="number" id="siblings" min="0" class="form-control">
+                <label for="reason">Reason :</label><select id="reason" class="form-control">
+                                <option class="form-control">Abuse</option>
+                                <option class="form-control">Alcohol</option>
+                                <option class="form-control">Blennelytria</option>
+                                <option class="form-control">Burn</option>
+                                <option class="form-control">Opium</option>
+                                <option class="form-control">Mental Pressure</option>
+                                <option class="form-control">Grief</option>
+                                <option class="form-control">Gonorrhea</option>
+                                <option class="form-control">Injury</option>
+                                <option class="form-control">Suppression</option>
+                            </select>
+                <label for="problem">Problem :</label><select id="problem" class="form-control">
+                                <option class="form-control">Mental</option>
+                                <option class="form-control">Physical</option>
+                                <option class="form-control">Particular</option>
+                                <option class="form-control">Gynecological</option>
+                                <option class="form-control">Pediatrics</option>
+                            </select>
+                <label for="symptom">Symptoms :</label><select id="symptom" class="form-control"></select>
+                <label for="description">Description :</label><textarea  id="description" class="form-control"></textarea>
+                <label for="address">Address :</label><input type="text" id="address" class="form-control">
+                <label for="pwd">Password :</label><input type="password" id="pwd" class="form-control"><br>
+                <center><button type="button" class="btn btn-info" id="save">Save</button></center><br><br>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $.post('header.html',{},function(data){
+                   $("#new_div").html(data);
+                }); 
+                $('#problem').click(function(){
+                    var cat=$("#problem").val();
+                    $.post('symp_search.jsp',{p:cat},function(data){
+                       $("#symptom").html(data);
+                    });                  
+                });
+                $("#save").click(function(){
+                   var name= $('#name').val();
+                   var age= $('#age').val();
+                   var dat= $("#dat").val();
+                   var parents= $("#parents").val();
+                   var siblings= $("#siblings").val();
+                   var reason=$("#reason").val();
+                   var problem= $("#problem").val();
+                   var symptom= $("#symptom").val();
+                   var description= $("#description").val();
+                   var address= $("#address").val();
+                   var pwd= $("#pwd").val();
+                   window.location="bg_patient.jsp?name="+name+"&age="+age+"&dat="+dat+"&parents="+parents+"&siblings="+siblings+"&reason="+reason+"&problem="+problem+"&symptom="+symptom+"&description="+description+"&address="+address+"&pwd="+pwd;  
+                });
+            });
+        </script>
+    </body>
+</html>

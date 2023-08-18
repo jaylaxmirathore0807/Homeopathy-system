@@ -1,0 +1,12 @@
+SMAP
+search_005fpatients_jsp.java
+JSP
+*S JSP
+*F
++ 0 search_patients.jsp
+search_patients.jsp
+*L
+5,35:48
+40,16:84
+55,10:100
+*E

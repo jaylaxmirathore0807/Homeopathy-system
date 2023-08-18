@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Main Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap.min.css" rel="stylesheet">      
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="bootstrap.min.js"></script>
+        <script src="jquery.min.js"></script>       
+    </head>  
+    <body>
+   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcvb n  mxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     <div id="new_div"></div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="main.html">Home</a>
+                <a class="navbar-brand" href="about.html">About</a>
+                <a class="navbar-brand" href="contact.html">Contact</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="patient.html"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+                  <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav><br>
+        <div class="container text">    
+            <h3>What is Homeopathy?</h3>
+                <p>Homeopathy is a system of natural medicine introduced and developed by a German physician, Samuel Hahnemann, at the end of the 18th century. 
+                    Recognizing that the whole person-mind, body, spirit-is affected when there is illness, homeopathy seeks to treat that whole person. 
+                    The focus is not the diseased part or the sickness, rather the totality of the individual. Homeopathic medicines, or 'remedies', stimulate 
+                    the body's self-regulating mechanisms to initiate the healing process.
+                </p>
+
+            <h3>Homeopathic Philosophy</h3>
+                <p>When a person becomes ill, it is the whole that is sick: body, mind, spirit. The body manifests symptoms of illness but it is not the 
+                    origin of the illness. Upon death, the physical body remains, but it is no longer curable. That which is curable, the 'vital force', 
+                    has left the body. The origin of illness lies in an imbalance of the vital force. The symptoms expressed by the body, mind, and spirit 
+                    are the manifestation of that imbalance. By matching the symptoms of illness with the appropriate homeopathic remedy, the vital force 
+                    returns to balance. The symptoms disappear as the person heals themselves.
+                </p>
+
+            <h3>Homeopathic Principles</h3>
+                <p>Homeopathy has 4 principles that are its foundation. They remain unchanged over the last 200 years as their truth is demonstrated through 
+                    successful treatment of the sick.
+                </p>
+                <p> <b>The cornerstone principle</b> is Similia Similbus Curentur, "Let likes cure likes" Homeopathy actually derives its name from the 
+                    Greek, homoeo='similar', and pathos='suffering'. Through research and practice Hahnemann verified cure through the use of similars. 
+                    A substance that can produce disease in a healthy person is used to elicit a healing response in someone presenting with a similar 
+                    disease. Each person shows symptoms of the body/mind/spirit when they are sick. Some of these symptoms are common to that sickness, 
+                    others are characteristic of that person in their sickness. The homeopathic practitioner matches the symptom picture of the homeopathic 
+                    remedy to the symptom picture of the person, with particular attention paid to those symptoms which are unique to the individual.
+                </p>
+                <p> <b>The second principle</b> of homeopathy is The Single Remedy. Only one homeopathic remedy is given at any one time. It would be 
+                    difficult, if not impossible, to ascertain the action of multiple homeopathic remedies given all at once. The response of the vital 
+                    force would be unpredictable and ambiguous. Though Hahnemann experimented with this approach he abandoned it as unsatisfactory.
+                </p>
+                <p> <b>The third principle</b> of homeopathy is The Minimum Dose. This refers to the infinitesimal doses of medicine given as well as to the 
+                    repetition of dose only when necessary. Drugs given to individuals in material doses frequently cause side effects or adverse reactions. 
+                    To curtail this problem, the homeopath administers the smallest possible dose so as to maximize beneficial effects and minimize side effects. 
+                    Repetition of dose is determined by the individual's response to the remedy. Unnecessary repetition may lessen the response, even to the 
+                    correct remedy. In homeopathy, less is better.
+                </p>
+                <p> <b>The fourth principle</b> of homeopathy is The Potentized Remedy. Homeopathic remedies, though made from natural substances such as 
+                    plants, minerals, animals, etc., are manufactured unlike any other medicine. Through a process of serial dilution a very dilute extract is
+                    made. With every step of dilution the remedy is vigorously shaken-succussed. This process of succussion is designed to arouse the dynamic 
+                    nature of the medicine. To affect the vital force, a similarly energetic, homeopathic remedy must be employed.
+                </p>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $.post('header.html',{},function(data){
+                   $("#new_div").html(data);
+                }); 
+            });
+        </script>
+    </body>
+</html>
