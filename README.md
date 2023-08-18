@@ -12,3 +12,4 @@ The proposed system will show the exact medicine of specified disease through we
 ⦁	We can also print the case taking form by clicking on the print button.
 
 ⦁	After login the admin can add medicine by selecting symptoms, adding medicine and its weight 
+<img width="271" alt="hm" src="https://github.com/jaylaxmirathore0807/Homeopathy-system/assets/122472010/4e554172-75d8-4e0b-b215-8d993302471d">
